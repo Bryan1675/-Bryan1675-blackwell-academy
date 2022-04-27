@@ -1,0 +1,104 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+<body>
+        {% include ('modele/header.html.twig') %}
+    <section>
+	<div class="row" >
+		<div class="col-lg-4">
+        <div id="meteo">
+            <h2>Météo d'Arcadia Bay</h2>
+            <img loading="lazy" alt="image meteo {{ meteo  }}" src="images/meteo/{{ meteo  }}.png" id="image" />
+            <div id="temps">{{ temperature  }}°C</div>
+        </div>
+		</div>
+		 <div class="col-lg-8">
+        <h2>Bienvenue à Arcadia Bay</h2>
+
+        <p>Arcadia Bay est une ville paisible de l’Oregon en bord de mer, située non loin des villes de portland et
+            Salem, et
+            où le climat est océanique, à la fois doux et humide, ainsi que méditerranéen ; ses étés plus chauds et plus
+            secs
+            vous permettront de vous reposer à l’ombre d’un parasol sur une plage.
+            L’économie de la ville est basée sur le commerce de la pêche avec une faune et une flore diverse et variée :
+            vous
+            pourrez trouver de nombreux cerfs, des écureuils, de multiples espèces d'oiseaux et d'insectes, des baleines
+            ainsi
+            qu’une immense variété de poissons.</p>
+
+        <p>La famille la plus ancienne de la ville est celle des Prescott, qui a travaillé à la construction et a
+            participé à
+            des aspects importants de l'économie et de l'éducation d'Arcadia Bay, comme avec leur projet de lotissements
+            Pan
+            Estates</p>
+			</div>
+
+	</div>
+
+        <h3>Le Two Whales Diner</h3>
+
+        <div class="row">
+            <div class="col-lg">
+                <img loading="lazy" class="rounded widthBase" src="./images/accueil/twd.jpg" alt="Two Whales Diner">
+            </div>
+            <div class="col-lg">
+                <p>très populaire, en particulier avec les étudiants de la région. Les policiers, les camionneurs de passage et
+                d'autres résidents d'Arcadia Bay fréquentent également le restaurant, peut-être en raison de sa proximité
+                d'un arrêt de bus, d'un grand parking à côté et en face du restaurant et d'une station d'essence à proximité. ouvert 24 heures sur 24.</p>
+                <p>Le Two Whales Diner est un restaurant local à Arcadia Bay connu pour sa «cuisine maison» et son «service à l'ancienne».</p>
+             </div>
+        </div>
+
+        <h3>Le Belvedaire</h3>
+
+        <div class="row">
+            <div class="col-lg">
+                <img loading="lazy" class="rounded widthBase" src="./images/accueil/belvedaire.jpg" alt="Belvedaire">
+            </div>
+            <div class="col-lg">
+                <p>Le belvédère est un cadre idyllique, en hauteur, surplombant la vallée. Il est idéal pour se détendre, faire
+                    des promenades en famille et il dispose d'un coin couvert pour pique-niquer en toute sérénité. Deux jumelles
+                    sont mises à la disposition des promeneurs pour observer l'horizon.</p>
+                <p>Le chemin est ponctué d'éléments historiques, permettant de découvrir l'histoire de la colonisation des lieux
+                    et des tribus amérindiennes les ayant autrefois peuplés.</p>
+                <p>En contre-bas, un ruisseau coupe la vallée en deux. Un grand arbre, vieux de 400 ans, le surplombe et ses
+                    branches tordues offrent une ombre agréable aux beaux jours.</p>
+                <p>On peut profiter de l'herbe verte en s'y étendant, ou simplement s'asseoir sur des bancs.</p>
+            </div>
+        </div>
+
+        <h3>Le Phare</h3>
+
+         <div class="row">
+            <div class="col-lg">
+                <img loading="lazy" class="rounded widthBase" src="./images/accueil/phare.jpg" alt="phare">
+        </div>
+            <div class="col-lg">
+                <p>Point de vue a couper le souffle sur l'horizon, le phare peut également etre un endroit de détente entre
+                    terre et mer, mesurant 80 mêtre de hauteur, il fut construit en 1685 pour aider les bateau à arriver de bon port.</p>
+             </div>
+        </div>
+
+        <h3>La plage</h3>
+
+        <div class="row">
+            <div class="col-lg">
+                <img class="rounded widthBase" loading="lazy" src="./images/accueil/plage.jpg" alt="plage">
+            </div>
+
+            <div class="col-lg">
+                <p>longue de 400 mètres, vous pouvez y faire de longue promenades, observer l’horizon ou tout simplement vous
+                    reposer, vous amuser sur le sable ou bien vous baigner dans l’eau.</p>
+            </div>
+        </div>
+
+        
+        
+    </section>
+
+
+    {% include ('modele/foot.html.twig') %}
+</body>
+
+{% endblock %}

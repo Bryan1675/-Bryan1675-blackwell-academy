@@ -1,0 +1,51 @@
+{% extends "base.html.twig" %}
+{% block body %}
+
+<body>
+		{% include ('modele/header.html.twig') %}
+    
+	<section>
+		<h2>Quiz</h2>
+
+
+	<div id="default" >
+			<p>Afin de tester vos connaissances sur le jeu Life Is Strange, j'ai créé ce petit quiz de 15 questions.</p>
+			<p>Pour commencer le quiz, cliquez sur le bouton "Commencer"</p>
+		<div class="row">
+			<div class="col-lg-5"></div>
+			<div class="col-lg-2"><a href="javascript:switchDisplay();"><button class="btn btn-light" >Commencer</button></a></div>
+			<div class="col-lg-5"></div>
+		</div>
+	</div>
+	
+
+
+<div id="hide" style="display:none;">
+    {{ form_start(quizForm) }}
+		<div class="form-group">
+		
+{% for question in questions %}
+	<h3>Question {{ question.idQuestion }}/15</h3>
+    <p class="questions">{{ question.question }}</p>
+    {% for reponse in question.reponses %}
+	<div class="custom-control custom-radio reponses">
+        <input type="radio" class="custom-control-input" id="{{reponse.idReponse}}" name="{{question.idQuestion}}" value="{{reponse.reponse}}" required />
+		<label class="custom-control-label" for="{{reponse.idReponse}}">{{ reponse.reponse }}</label>
+    </div>
+	{% endfor %}
+{% endfor %}
+
+<div class="row">
+				<div class="col-lg-4"></div>
+				<div class="col-lg-4"><input type="submit" value="Valider" class="btn btn-light" /></div>
+				<div class="col-lg-4"></div>
+			</div>
+{{ form_end(quizForm) }}
+</div>
+
+		</section>
+	{% include ('modele/foot.html.twig') %}
+		</body>
+	
+
+{% endblock %}

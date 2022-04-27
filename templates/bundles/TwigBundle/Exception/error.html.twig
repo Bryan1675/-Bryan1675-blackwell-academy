@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %}{{status_code}} - {{status_text}}{% endblock %}
+
+{% block body %}
+<body>
+{% include ('modele/header.html.twig') %}
+
+    <body>
+
+     <section>
+        <div class="row">
+			<div class="col-lg-6">
+                <h2>{{status_code}} | {{status_text}}</h2>
+                <button type="button" class="btn btn-light"><a href="{{path('index')}}"">Aller à la page d'accueil</a></li></button>
+            </div>
+
+                {% set images = [
+                    ["Photo de la classe d'art", "art_class"],
+                    ["Selfie de Max et Chloe", "chloe_max_selfie"],
+                    ["Photo de classe", "class_photo"],
+                    ["Photo de chloe et Rachel", "cloe _and_rachel"],
+                    ["Photo role play Choe", "cloe_roleplay_game"],
+                    ["Photo de la famille Marsh", "marsh_familly"],
+                    ["Photo de Max et Cloe", "max_and_cloe"],
+                    ["Selfie de Max et Warren", "max_and_warren"],
+                    ["Selfie de Max", "max_selfie"],
+                    ["Photo de Nathan et Victoria", "nathan_and_victoria"],
+                    ["Photo de la famille Price", "price_family"],
+                    ["Photo de Rachel et Nathan", "rachel_and_nathan"],
+                    ["Poster du vortexclub", "vortexclub_ poster"],
+                ] %}
+                                   
+                {% set rand = random(12) %}
+
+            <div class="col-lg-6">
+                <img alt="{{images[rand][0]}}" src="images/errors/{{images[rand][1]}}.jpg" class="rounded heigh300 rounded"/>
+            </div>
+        </div>
+
+
+</section>
+
+{% include ('modele/foot.html.twig') %}
+
+</body>
+
+
+
+{% endblock %}

@@ -1,0 +1,99 @@
+{% extends "base.html.twig" %}
+{% block body %}
+
+<body>
+		{% include ('modele/header.html.twig') %}
+    
+	<section>
+
+		<h2>Le personnel de l'université : </h2>
+
+		<h3>Le personnel administratif :</h3>
+
+		<div class="row">
+			<div class="col-lg-4 text-center">
+				<h4>Principal</h4>
+				<img class="rounded" loading="lazy" src="./images/personnel_univ/ray_wells.png" alt="R_Wells" height="250" />
+				<p>Raymon Wells</p>
+			</div>
+			<div class="col-lg-4 text-center">
+				<h4>Gestion financière</h4>
+				<img class="rounded" loading="lazy" src="./images/personnel_univ/lisa_avena.png" alt="L_Avena" height="250" />
+				<p>Lisa Avena</p>
+			</div>
+			<div class="col-lg-4 text-center">
+				<h4>Gestion administrative</h4>
+				<img class="rounded" loading="lazy" src="./images/personnel_univ/marianna_taylor.png" alt="M_Taylor" height="250" />
+				<p>Marianna Taylor</p>
+			</div>
+		</div>
+		
+		<h3>Le personnel enseignant :</h3>
+
+		<div class="row">
+			<div class="col-lg-4 text-center">
+				<h4>Photographie</h4>
+				<img class="rounded" loading="lazy" src="./images/personnel_univ/mark_jefferson.png" alt="M_Jefferson" height="250" />
+				<p>Mark Jefferson</p>
+			</div>
+			<div class="col-lg-4 text-center">
+				<h4>Sport</h4>
+				<img class="rounded" loading="lazy" src="./images/personnel_univ/michelle_barenchi.png" alt="M_Barenchi" height="250" />
+				<p>Michelle Barenchi</p>
+			</div>
+			<div class="col-lg-4 text-center">
+				<h4>Mathémathiques et sciences</h4>
+				<img class="rounded" loading="lazy" src="./images/personnel_univ/michelle_grant.png" alt="M_Grant" height="250" />
+				<p>Michelle Grant</p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-4 text-center">
+				<h4>Anglais et littérature</h4>
+				<img class="rounded" loading="lazy" src="./images/personnel_univ/bernadette_hoida.png" alt="B_Hoida" height="250" />
+				<p>Bernadette Hoida</p>
+			</div>
+			<div class="col-lg-4 text-center">
+				<h4>Théatre</h4>
+				<img class="rounded" loading="lazy" src="./images/personnel_univ/travis_keaton.png" alt="T_keyton" height="250" />
+				<p>Travis Keaton</p>
+			</div>
+		</div>
+		
+		<h3>Divers  :</h3>
+
+		<div class="row">
+			<div class="col-lg-4 text-center">
+				<h4>Infirmière</h4>
+				<img class="rounded" loading="lazy" src="./images/personnel_univ/an-marie_barenchi.png" alt="AM_Barenchi" height="250" />
+				<p>An-Marie Barenchi</p>
+			</div>
+			<div class="col-lg-4 text-center">
+				<h4>Agent de sécurité</h4>
+				<img class="rounded" loading="lazy" src="./images/personnel_univ/david_madsen.png" alt="D_Madsen" height="250" />
+				<p>David Madsen</p>
+			</div>
+			<div class="col-lg-4 text-center">
+				<h4>Agent de sécurité</h4>
+				<img class="rounded" loading="lazy" src="./images/personnel_univ/skip_matthiews.png" alt="S_Matthiews" height="250" />
+				<p>Skip Matthews</p>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-4 text-center">
+				<h4>Concièrge</h4>
+				<img class="rounded" loading="lazy" src="./images/personnel_univ/samuel_taylor.png" alt="S_Taylor" height="250" />
+				<p>Samuel Taylor</p>
+			</div>
+		</div>
+
+		</section>
+
+	
+	{% include ('modele/foot.html.twig') %}
+</body>
+
+			
+{% endblock %}

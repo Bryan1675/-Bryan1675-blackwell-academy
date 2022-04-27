@@ -1,0 +1,36 @@
+{% extends "base.html.twig" %}
+{% block body %}
+
+<body>
+		{% include ('modele/header.html.twig') %}
+    
+	<section>
+
+		<h2>Résultat du quiz</h2>
+
+		<h3>Vous avez eu {{note}}/15 !</h3>
+
+		{% for question in questions %}
+    			<p class="questions">{{ question.idQuestion }}. {{ question.question }}</p>
+			{% if userRep[loop.index0] == bonneReponses[loop.index0] %}
+				<div class="resultat">
+					<p><span>Bonne réponse !</span></p>
+					<p>{{bonneReponses[loop.index0]}}</p>
+				</div>
+			{% else %}
+				<div class="resultat">
+					<p>Mauvaise réponse, la réponse était : <span>{{bonneReponses[loop.index0]}}</span></p>
+					<p>votre reponse : {{userRep[loop.index0]}}</p>
+				</div>
+			{% endif %}
+		{% endfor %}
+		
+
+
+		</section>
+
+	{% include ('modele/foot.html.twig') %}
+</body>
+
+			
+{% endblock %}

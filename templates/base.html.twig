@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="Life Is Strange, arcadia bay, Blackwell, Blackwell University, Oregon" />
+    <meta name="description" content="Blackwell Academy est une université située à Arcadia Bay, ce site, fictif, est inspiré du jeu Life Is Strange, Il y a une page de contact, une page de commentaire et un quiz sur le jeu.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}{{pageName}} - Blackwell Academy{% endblock %}</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="{{ asset('css/navbar.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/index.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/style-lg.css') }}" />
+    <script src="{{ asset('js/script.js') }}"></script>
+	<link rel="icon" href="./images/divers/icon.jpg" />
+</head>
+
+	
+    {% block body %}
+	{% endblock %}
+    {% block javascripts %}{% endblock %}
+
+</html>

@@ -1,0 +1,105 @@
+{% extends 'base.html.twig' %}
+
+{% block body  %}
+
+<body>
+	{% include ('modele/header.html.twig') %}
+	
+	
+	
+    <section>
+
+		<h2>Ajouter un commentaire</h2>
+
+		{{ form_start(formComm) }}
+
+		<div class="form-group">
+
+			<div class="row">
+				<div class="col-lg-2"></div>
+				<div class="col-lg-8"><label for="form_UserName">Votre nom :</label></div>
+				<div class="col-lg-2"></div>
+			</div>
+
+			<div class="row">
+				<div class="col-lg-2"></div>
+				<div class="col-lg-8">{{form_widget(formComm.UserName)}}</div>
+				<div class="col-lg-2"></div>
+			</div>
+
+			<div class="row">
+				<div class="col-lg-2"></div>
+				<div class="col-lg-8"><label for="form_CommContent">Votre commentaire :</label></div>
+				<div class="col-lg-2"></div>
+			</div>
+
+			<div class="row">
+				<div class="col-lg-2"></div>
+				<div class="col-lg-8">{{form_widget(formComm.CommContent)}}</div>
+				<div class="col-lg-2"></div>
+			</div>
+
+		</div>
+		
+			<div class="row">
+				<div class="col-lg-2"></div>
+				<div class="col-lg-8"><input type="submit" value="Envoyer" class="btn btn-light" /></div>
+				<div class="col-lg-2"></div>
+			</div>
+
+		{{ form_end(formComm) }}
+		<hr id="commentaires" />
+		
+	
+	<h2>Commentaires</h2>
+	{% include 'flash_messages.html.twig' %}
+
+
+	{% for commentaire in commentaires |slice(0,10) %}
+		<div class="comm-group">
+			<div class="row">
+				<div class="col-lg-3"></div>
+				<div class="comm-name col-lg-4 font-weight-bold">{{commentaire.UserName}}</div>
+				<div class=" comm-date col-lg-2">{{ commentaire.createdAt | date('d/m/Y H:i', "Europe/Paris")}}</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-3"></div>
+				<div class="comm-content col-lg-6 rounded"><p>{{ commentaire.CommContent}}</p></div>
+			</div>
+		</div> 
+	{% endfor %}
+
+	<div class="row">
+		<div class="col-lg-3"></div>
+		<div class="col-lg-6"><button class="btn btn-light" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+			Afficher plus de commentaires
+		  </button></div>
+		<div class="col-lg-3"></div>
+	</div>
+
+	
+	<div class="collapse" id="collapseExample">
+	  <div>
+		{% for commentaire in commentaires|slice(10,50) %}
+        <div class="comm-group">
+			<div class="row">
+				<div class="col-lg-3"></div>
+				<div class="comm-name col-lg-4 font-weight-bold">{{commentaire.UserName}}</div>
+				<div class=" comm-date col-lg-2">{{ commentaire.createdAt | date('d/m/Y H:i', "Europe/Paris")}}</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-3"></div>
+				<div class="comm-content col-lg-6 rounded"><p>{{ commentaire.CommContent}}</p></div>
+			</div>
+		</div> 
+    {% endfor %}
+	  </div>
+	</div>
+
+	
+    </section>
+    {% include ('modele/foot.html.twig') %}
+
+</body>
+
+{% endblock %}

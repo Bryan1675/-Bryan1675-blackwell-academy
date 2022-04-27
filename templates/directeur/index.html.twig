@@ -1,0 +1,43 @@
+{% extends "base.html.twig" %}
+{% block body %}
+
+<body>
+        {% include ('modele/header.html.twig') %}
+
+
+
+    <section>
+
+        <h2>Le mot du Directeur</h2>
+
+        <div id="Wells"><img loading="lazy" class="rounded" src="./images/personnel_univ/ray_wells.png" alt="Wells" height="250px" /></div>
+        <p>L’ensemble scolaire Blackwell Academy est un établissement privé sous contrat d’association avec l’Etat,
+            ouvert à tous, de toutes ressources, conditions sociales, origines scolaires, culturelles, géographiques et
+            religieuses.</p>
+
+        <p>Fort de son expérience, l’établissement scolaire est un lieu d’enseignement de matières générales et
+            techniques d’enseignement supérieur il accueille près de 1300 étudiants. Le cadre privilégié permet un
+            accueil en journée ou en internat.</p>
+
+        <p>C’est aussi un lieu d’échanges et de rencontres ouvert sur son territoire et sur le monde professionnel.</p>
+
+        <p>La carte des formations couvre 2 grands pôles : scientifique et artistique. Par la diversification des
+            parcours, nous souhaitons apporter la réponse la plus ajustée possible à la demande de scolarisation de la
+            famille et accompagner l’élève dans son parcours.</p>
+
+        <p>Convaincu que le jeune accueilli est une personne unique, nous attachons de l’importance à nouer avec lui ou
+            elle une relation faite de dialogue, de confiance et de respect réciproque.</p>
+
+        <p>L’ouverture à l’internationale, les activités culturelles, artistiques, spirituelles, sportives animent tout
+            au long de l’année un projet éducatif que nous voulons promouvoir dans la tradition universitaire de
+            formation intégrale de la Personne.</p>
+
+        <div id="sign"><b>Raymond Wells</b></div>
+
+    </section>
+
+    {% include ('modele/foot.html.twig') %}
+
+</body>
+
+{% endblock %}
